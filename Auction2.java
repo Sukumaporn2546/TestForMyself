@@ -20,14 +20,11 @@ public class Auction2 {
                 } else {
                     countRound[j]++;
                 }
-
             }
             for (int l = 0; l < N; l++) {
                 System.out.print(startPrice[l] + " ");
             }
-
             System.out.println();
-
         }
     }
 }
