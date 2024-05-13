@@ -5,7 +5,6 @@ public class RemoveMe {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
         int N = sc.nextInt();
-        String text = "";
         for (int i = 0; i < N; i++) {
             int option = sc.nextInt();
             String word = sc.next();
@@ -13,7 +12,6 @@ public class RemoveMe {
                 int index = str.indexOf(word);
                 if (index >= 0) {
                     String front = str.substring(0, index);
-                    System.out.println(front);
                     String back = str.substring(index + word.length());
                     str = front + back;
                     System.out.println(str);
