@@ -3,15 +3,12 @@ import java.util.Scanner;
 class FoodOrder {
     public String name;
     public int foodTotal = 0;
-
     public FoodOrder(String name) {
         this.name = name;
     }
-
     public void addFood(int price) {
         this.foodTotal += price;
     }
-
     public void finalizeReceipt() {
         System.out.println(name);
         System.out.println(foodTotal);
