@@ -10,7 +10,6 @@ class Bus {
         this.id = id;
         this.type = type;
         this.seats = seats;
-        this.currentSeat = 1;
     }
 
     void printStats() {
@@ -77,6 +76,5 @@ public class BusCompany1 {
                 System.out.println("sorry");
             }
         }
-
     }
 }
