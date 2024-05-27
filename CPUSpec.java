@@ -1,5 +1,5 @@
 import java.util.Scanner;
-/* 
+
 class CPU {
     public String type;
     public int speed, socket, ram;
@@ -29,7 +29,7 @@ class CPU {
         System.out.println(valid);
     }
 }
-*/
+
 public class CPUSpec {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
