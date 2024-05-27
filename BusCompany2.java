@@ -1,5 +1,5 @@
 import java.util.Scanner;
-/* 
+
 class Bus {
     public String id;
     public int type, seats, currentSeat = 0;
@@ -23,7 +23,7 @@ class Bus {
         System.out.println(this.currentSeat + " " + seats);
         System.out.println(state ? "Active" : "Inactive");
     }
-*/
+
     boolean reserve(int seat) {
         if (seat + this.currentSeat <= this.seats && seat>=0 && state==true) {
             this.currentSeat += seat;
