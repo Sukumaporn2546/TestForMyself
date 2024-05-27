@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+/* 
 class Bus {
     public String id;
     public int type, seats, currentSeat=0;
@@ -22,7 +22,7 @@ class Bus {
         System.out.println(state?"Active":"Inactive");
     }
 }
-
+*/
 public class BusCompany1 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);

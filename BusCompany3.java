@@ -3,7 +3,7 @@ import java.util.Scanner;
 class Bus {
     public String id;
     public int type;
-    private int seats, currentSeat = 0;
+    private int seats, currentSeat;
     private boolean state = true;
 
     public Bus(String id, int type, int seats) {
@@ -25,9 +25,9 @@ class Bus {
         System.out.println(state ? "Active" : "Inactive");
     }
 
-    boolean reserve(int seat) {
-        if (seat + this.currentSeat <= this.seats && seat >= 0 && state == true) {
-            this.currentSeat += seat;
+    boolean reserve(int K) {
+        if (K + currentSeat <= seats && K > 0 &&   state ) {
+            this.currentSeat += K;
             return true;
         } else {
             return false;
@@ -43,12 +43,12 @@ class Bus {
     }
 }
 
-public class BusCompany1 {
+public class BusCompany3 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int num = scan.nextInt();
-        Bus[] b = new Bus[num];
-        for (int i = 0; i < num; i++) {
+        int Q = scan.nextInt();
+        Bus[] b = new Bus[Q];
+        for (int i = 0; i < Q; i++) {
             String id = scan.next();
             int type = scan.nextInt();
             int seats = scan.nextInt();
@@ -60,20 +60,25 @@ public class BusCompany1 {
             int K = scan.nextInt();
             int T = scan.nextInt();
             if (P == 1){
-                boolean check = b[T-1].reserve(K);
-                if(check)
-                System.out.println(b[T-1].id);
-                else{
+                boolean check = false;
+                for(int j =0;j<Q;j++){
+                    if(b[j].type == T){
+                        if(b[j].reserve(K)){
+                            check = true;
+                            System.out.println(b[j].id);
+                            break;
+                        }
+                    }
+                }
+                if(!check){
                     System.out.println("sorry");
                 }
             }
             else if (P == 2){
                 b[T-1].sendToRepair();
-                System.out.println("sorry");
             }
-            else if (P == 3){
+            else {
                 b[T-1].backToService();
-                System.out.println("sorry");
             }
         }
     }
