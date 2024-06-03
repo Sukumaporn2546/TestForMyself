@@ -104,7 +104,7 @@ public class MBCompat {
             model = null;
 
         CPU cpu = new CPU(model, clocks, socket, memType);
-        cpu.printInfo();
+     
 
         scan.nextLine();
         model = scan.nextLine();
